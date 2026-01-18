@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH Price Tracker </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Ethereum Price Tracker</h1>
+        
+        <!-- Loading state -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Učitavam cijenu...</p>
+        </div>
+
+        <!-- Error state -->
+        <div id="error" class="error hidden">
+            <p> Greška prilikom učitavanja!</p>
+            <button onclick="location.reload()">Pokušaj ponovno</button>
+        </div>
+
+        <!-- Price display -->
+        <div id="price-container" class="price-container hidden">
+            <div class="price-card">
+                <h2>Ethereum (ETH)</h2>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span id="eth-price">0.00</span>
+                </div>
+                <div class="change" id="price-change">
+                    <span>24h promjena: </span>
+                    <span id="change-value">0%</span>
+                </div>
+                <div class="last-update">
+                    Zadnje ažuriranje: <span id="last-update">-</span>
+                </div>
+            </div>
+
+            <button id="refresh-btn" class="refresh-btn">🔄 Osvježi</button>
+        </div>
+
+        <div class="footer">
+            <p>Powered by CoinGecko API</p>
+            <p>Auto-refresh every 60s</p>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

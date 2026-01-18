@@ -1,0 +1,13 @@
+{
+  "name": "eth-price-tracker",
+  "version": "1.0.0",
+  "description": "Real-time Ethereum price tracker - Async/await practice",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  },
+  "author": "BokaBlock"
+}
